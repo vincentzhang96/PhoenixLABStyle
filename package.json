@@ -1,0 +1,14 @@
+{
+  "name": "phoenixlabstyle",
+  "version": "1.0.0",
+  "description": "Stylesheets for PhoenixLAB web pages and applications",
+  "main": "gulp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vincent Zhang",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
