@@ -14,3 +14,20 @@
 .test-root {
   -fx-background-color: @color-background;
 }
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Label                                                                       *
+ *                                                                             *
+ ******************************************************************************/
+.label {
+  -fx-text-fill: @color-foreground;
+  &:disabled {
+    -fx-opacity: 100%;
+    -fx-text-fill: @color-foreground-disabled;
+  }
+}
+.label:show-mnemonics > .mnemonic-underline {
+  -fx-stroke: @color-foreground;
+}
