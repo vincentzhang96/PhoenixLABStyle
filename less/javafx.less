@@ -31,3 +31,45 @@
 .label:show-mnemonics > .mnemonic-underline {
   -fx-stroke: @color-foreground;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * Button                                                                      *
+ *                                                                             *
+ ******************************************************************************/
+
+.button {
+  -fx-background-color: @color-body;
+  -fx-background-insets: 0;
+  -fx-background-radius: 0;
+  -fx-padding: 0.6em 1.2em;
+  -fx-text-fill: @color-foreground;
+  -fx-alignment: CENTER;
+  -fx-content-display: TOP;
+  -fx-border-width: 0 0 0.25em 0;
+  -fx-border-color: @color-accent;
+  &:focused {
+    -fx-background-color: @color-body-focused;
+    -fx-text-fill: @color-foreground-focused;
+    -fx-background-insets: 0;
+    -fx-border-color: @color-accent;
+  }
+  &:hover {
+    -fx-background-color: @color-body-hovered;
+    -fx-text-fill: @color-foreground-hovered;
+    -fx-background-insets: 0;
+    -fx-border-color: @color-accent-hovered;
+  }
+  &:armed {
+    -fx-background-color: @color-body-pressed;
+    -fx-text-fill: @color-foreground-pressed;
+    -fx-background-insets: 0;
+    -fx-border-color: @color-accent-pressed;
+  }
+
+  &:disabled {
+    -fx-opacity: 100%;
+    -fx-background-color: @color-body-disabled;
+    -fx-border-color: @color-accent-disabled;
+  }
+}
