@@ -48,6 +48,9 @@
   -fx-content-display: TOP;
   -fx-border-width: 0 0 0.25em 0;
   -fx-border-color: @color-accent;
+
+  //  PSEUDOSTATES
+
   &:hover {
     -fx-background-color: @color-body-hovered;
     -fx-text-fill: @color-foreground-hovered;
@@ -72,6 +75,8 @@
     -fx-border-color: @color-accent-disabled;
   }
 
+  //  DEFAULT BUTTON
+
   &:default {
     -fx-border-color: @color-accent-default;
     &:hover {
@@ -87,6 +92,9 @@
       -fx-border-color: @color-accent-default-disabled;
     }
   }
+
+  //  CANCEL BUTTON
+
   &:cancel {
     -fx-border-color: @color-accent-cancel;
     &:hover {
