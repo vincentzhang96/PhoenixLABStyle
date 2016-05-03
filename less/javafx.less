@@ -268,6 +268,29 @@
     }
   }
 
+  &:indeterminate {
+    & > .box {
+      -fx-background-color: @color-body, @color-accent;
+      -fx-background-insets: 0, 0.7em 0.5em;
+      -fx-border-color: @color-accent;
+    }
+    &:hover > .box {
+      -fx-background-color: @color-body-hovered, @color-accent-hovered;
+      -fx-border-color: @color-accent-hovered;
+    }
+    &:armed > .box {
+      -fx-background-color: @color-body-pressed, @color-accent-pressed;
+      -fx-border-color: @color-accent-pressed;
+    }
+    &:focused > .box {
+      -fx-background-color: @color-body-focused, @color-accent-focused;
+      -fx-border-color: @color-accent-focused;
+    }
+    &:disabled > .box {
+      -fx-background-color: @color-body-disabled, @color-accent-disabled;
+      -fx-border-color: @color-accent-disabled;
+    }
+  }
 }
 
 
