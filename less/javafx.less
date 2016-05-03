@@ -87,4 +87,19 @@
       -fx-border-color: @color-accent-default-disabled;
     }
   }
+  &:cancel {
+    -fx-border-color: @color-accent-cancel;
+    &:hover {
+      -fx-border-color: @color-accent-cancel-hovered;
+    }
+    &:armed {
+      -fx-border-color: @color-accent-cancel-pressed;
+    }
+    &:focused {
+      -fx-border-color: @color-accent-cancel-focused;
+    }
+    &:disabled {
+      -fx-border-color: @color-accent-cancel-disabled;
+    }
+  }
 }
