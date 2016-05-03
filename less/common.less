@@ -1,11 +1,19 @@
 @color-background: #151515;
+
 @color-foreground: #B2B2B2;
-@color-foreground-disabled: darken(@color-foreground, 20%);
+@color-foreground-disabled: darken(@color-foreground, 30%);
 @color-foreground-focused: #FFFFFF;
 @color-foreground-hovered: #FFFFFF;
 @color-foreground-pressed: #FFFFFF;
+
 @color-accent: #7BAFDC;
+@color-accent-focused: lighten(@color-accent, 5%);
+@color-accent-hovered: lighten(@color-accent, 10%);
+@color-accent-pressed: darken(@color-accent, 20%);
+@color-accent-disabled: darken(desaturate(@color-accent, 40%), 40%);
+
 @color-body: #0F0F0F;
-@color-body-focused: #1F1F1F;
-@color-body-hovered: #292929;
+@color-body-focused: lighten(@color-body, 5%);
+@color-body-hovered: lighten(@color-body, 10%);
 @color-body-pressed: #000000;
+@color-body-disabled: lighten(@color-background, 2%);;
