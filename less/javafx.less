@@ -72,4 +72,19 @@
     -fx-border-color: @color-accent-disabled;
   }
 
+  &:default {
+    -fx-border-color: @color-accent-default;
+    &:hover {
+      -fx-border-color: @color-accent-default-hovered;
+    }
+    &:armed {
+      -fx-border-color: @color-accent-default-pressed;
+    }
+    &:focused {
+      -fx-border-color: @color-accent-default-focused;
+    }
+    &:disabled {
+      -fx-border-color: @color-accent-default-disabled;
+    }
+  }
 }
