@@ -48,12 +48,6 @@
   -fx-content-display: TOP;
   -fx-border-width: 0 0 0.25em 0;
   -fx-border-color: @color-accent;
-  &:focused {
-    -fx-background-color: @color-body-focused;
-    -fx-text-fill: @color-foreground-focused;
-    -fx-background-insets: 0;
-    -fx-border-color: @color-accent;
-  }
   &:hover {
     -fx-background-color: @color-body-hovered;
     -fx-text-fill: @color-foreground-hovered;
@@ -66,10 +60,16 @@
     -fx-background-insets: 0;
     -fx-border-color: @color-accent-pressed;
   }
-
+  &:focused {
+    -fx-background-color: @color-body-focused;
+    -fx-text-fill: @color-foreground-focused;
+    -fx-background-insets: 0;
+    -fx-border-color: @color-accent;
+  }
   &:disabled {
     -fx-opacity: 100%;
     -fx-background-color: @color-body-disabled;
     -fx-border-color: @color-accent-disabled;
   }
+
 }
