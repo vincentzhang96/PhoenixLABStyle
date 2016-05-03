@@ -111,3 +111,83 @@
     }
   }
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * ToggleButton                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+.toggle-button {
+  -fx-background-color: @color-body;
+  -fx-background-insets: -0.25em 0 0 0;
+  -fx-background-radius: 0;
+  -fx-padding: 0.6em 1.2em;
+  -fx-text-fill: @color-foreground;
+  -fx-alignment: CENTER;
+  -fx-content-display: LEFT;
+  -fx-border-insets: -0.25em 0 0 0;
+  -fx-border-width: 0.25em 0;
+  -fx-border-color: transparent transparent @color-foreground transparent;
+
+  //  PSEUDOSTATES
+
+  &:hover {
+    -fx-background-color: @color-body-hovered;
+    -fx-text-fill: @color-foreground-hovered;
+    -fx-background-insets: 0;
+    -fx-border-color: @color-foreground-hovered;
+  }
+  &:armed {
+    -fx-background-color: @color-body-pressed;
+    -fx-text-fill: @color-foreground-pressed;
+    -fx-background-insets: 0;
+    -fx-border-color: @color-foreground-pressed;
+  }
+  &:focused {
+    -fx-background-color: @color-body-focused;
+    -fx-text-fill: @color-foreground-focused;
+    -fx-background-insets: 0;
+    -fx-border-color: @color-foreground;
+  }
+  &:disabled {
+    -fx-opacity: 100%;
+    -fx-background-color: @color-body-disabled;
+    -fx-border-color: @color-foreground-disabled;
+  }
+
+  //  SELECTED TOGGLEBUTTON
+
+  &:selected {
+    -fx-border-color: @color-accent;
+    -fx-text-fill: @color-accent;
+
+    //  PSEUDOSTATES
+
+    &:hover {
+      -fx-background-color: @color-body-hovered;
+      -fx-text-fill: @color-accent-hovered;
+      -fx-background-insets: 0;
+      -fx-border-color: @color-accent-hovered;
+    }
+    &:armed {
+      -fx-background-color: @color-body-pressed;
+      -fx-text-fill: @color-accent-pressed;
+      -fx-background-insets: 0;
+      -fx-border-color: @color-accent-pressed;
+    }
+    &:focused {
+      -fx-background-color: @color-body-focused;
+      -fx-text-fill: @color-accent-focused;
+      -fx-background-insets: 0;
+      -fx-border-color: @color-accent-focused;
+    }
+    &:disabled {
+      -fx-opacity: 100%;
+      -fx-background-color: @color-body-disabled;
+      -fx-border-color: @color-accent-disabled;
+      -fx-text-fill: @color-accent-disabled;
+    }
+  }
+
+}
