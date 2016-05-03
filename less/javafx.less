@@ -4,7 +4,6 @@
   JavaFX Stylesheet
 
 */
-
 @import "common";
 
 .root {
@@ -14,7 +13,6 @@
 .test-root {
   -fx-background-color: @color-background;
 }
-
 
 /*******************************************************************************
  *                                                                             *
@@ -28,6 +26,7 @@
     -fx-text-fill: @color-foreground-disabled;
   }
 }
+
 .label:show-mnemonics > .mnemonic-underline {
   -fx-stroke: @color-foreground;
 }
@@ -189,5 +188,86 @@
       -fx-text-fill: @color-accent-disabled;
     }
   }
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * CheckBox                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.check-box {
+  -fx-text-fill: @color-foreground;
+
+  & > .box {
+    -fx-background-color: @color-body;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-color: @color-foreground;
+    -fx-border-radius: 0;
+    -fx-border-width: 0.1666667em;
+  }
+  &:hover {
+    -fx-text-fill: @color-foreground-hovered;
+    & > .box {
+      -fx-background-color: @color-body-hovered;
+      -fx-border-color: @color-accent-hovered;
+    }
+  }
+  &:armed {
+    -fx-text-fill: @color-foreground-pressed;
+    > .box {
+      -fx-background-color: @color-body-pressed;
+      -fx-border-color: @color-accent-pressed;
+    }
+  }
+  &:focused {
+    -fx-text-fill: @color-foreground-focused;
+    > .box {
+      -fx-background-color: @color-body-focused;
+      -fx-border-color: @color-accent-focused;
+    }
+  }
+  &:disabled {
+    -fx-opacity: 100%;
+    > .box {
+      -fx-opacity: 100%;
+      -fx-background-color: @color-body-disabled;
+      -fx-border-color: @color-foreground-disabled;
+    }
+  }
+  & > .box > .mark {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-shape: "";
+  }
+
+  //  SELECTED CHECKBOX
+
+  &:selected {
+    & > .box {
+      -fx-background-color: @color-body, @color-accent;
+      -fx-background-insets: 0, 0.5em;
+      -fx-border-color: @color-accent;
+    }
+    &:hover > .box {
+      -fx-background-color: @color-body-hovered, @color-accent-hovered;
+      -fx-border-color: @color-accent-hovered;
+    }
+    &:armed > .box {
+      -fx-background-color: @color-body-pressed, @color-accent-pressed;
+      -fx-border-color: @color-accent-pressed;
+    }
+    &:focused > .box {
+      -fx-background-color: @color-body-focused, @color-accent-focused;
+      -fx-border-color: @color-accent-focused;
+    }
+    &:disabled > .box {
+      -fx-background-color: @color-body-disabled, @color-accent-disabled;
+      -fx-border-color: @color-accent-disabled;
+    }
+  }
 
 }
+
+
