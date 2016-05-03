@@ -241,6 +241,11 @@
     -fx-background-insets: 0;
     -fx-shape: "";
   }
+  &:indeterminate > .box > .mark {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-shape: "";
+  }
 
   //  SELECTED CHECKBOX
 
@@ -268,10 +273,13 @@
     }
   }
 
+  //  INDETERMINATE
+  //  TODO figure out why this is a different size
+
   &:indeterminate {
     & > .box {
       -fx-background-color: @color-body, @color-accent;
-      -fx-background-insets: 0, 0.7em 0.5em;
+      -fx-background-insets: 0, 0.75em 0.25em;
       -fx-border-color: @color-accent;
     }
     &:hover > .box {
